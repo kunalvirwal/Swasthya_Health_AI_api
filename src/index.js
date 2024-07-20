@@ -10,7 +10,7 @@ app.use(express.json());
 // app.use(cookieParser());  // used later for verification
 app.use(express.urlencoded({ extended: true }));
 
-app.use("", require("./routes/routes"));
+app.use("", require("./routes/Routes"));
 
 app.listen(PORT,(error)=>{
     if (error) throw error;
