@@ -14,6 +14,10 @@ async function getVideos(query){
         }
     })
     let vids = videos["data"]["items"].map((val)=> {return val["snippet"]}) 
+    vids.forEach((val) => {
+    val["thumbnails"]=val["thumbnails"]["medium"]["url"]
+    });
+
     return vids
 }
 
