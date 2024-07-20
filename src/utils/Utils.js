@@ -17,6 +17,20 @@ async function getVideos(query){
     return vids
 }
 
+async function getArticles(list){
+    let query =list.join(" OR ")
+    const articles = await axios.get("https://newsapi.org/v2/everything",{
+        params:{
+            apikey: process.env.NEWSAPI_KEY,
+            q:query,
+            
+        }
+    })
+    return (articles["data"]["articles"]).slice(0,Math.min(10,articles["data"]["totalResults"]) )
+    
+}
+
 module.exports = {
     getVideos,
+    getArticles,
 }

@@ -2,9 +2,11 @@
 const utils = require("../utils/Utils")
 
 async function getHomeRecommendations(req,res){
-    let query = ""  // change according to the user
+    let list = ["bikes"]
+    let query = list.join(" ")  // change according to the user
     const vids = await utils.getVideos(query)
-    res.status(200).json({items:vids})
+    const articles = await utils.getArticles(list)
+    res.status(200).json({items:vids,articles:articles})
 }
 
 module.exports = {
