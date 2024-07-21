@@ -21,6 +21,7 @@ It holds the power to revolutionize this domain by providing personalized wellne
   <li>Clone the repo and cd to the project directory</li>
   <li>Copy sample.env to .env and update the environment variables</li>
   <li>Run <strong>"npm i"</strong> to install all the dependencies</li>
+  <li>Open mysql shell and copy all queries into the mysql shell </li>
   <li>To run for development server use <strong>"npm run start:dev"</strong></li>
   <li>To run for deployment use <strong>"npm run start"</strong></li>
    
